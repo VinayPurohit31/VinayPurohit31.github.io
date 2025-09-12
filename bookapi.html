@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project | Bookstore REST API</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+        html {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #22d3ee, #06b6d4, #0891b2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-300">
+
+    <!-- Header (Same as main page for consistency) -->
+    <header class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-sm border-b border-slate-800">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="./index.html" class="text-2xl font-bold gradient-text">VP</a>
+                <a href="./index.html#projects" class="flex items-center space-x-2 text-lg hover:text-cyan-400 transition-colors duration-300">
+                    <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                    <span>Back to Projects</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 pt-16 pb-24">
+
+        <!-- Project Title -->
+        <section class="text-center py-16">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-slate-100">Bookstore REST API</h1>
+            <p class="text-xl text-slate-400 max-w-2xl mx-auto mt-4">
+                A scalable Spring Boot API with CRUD operations, filtering, sorting, and pagination for over 1,000 records.
+            </p>
+            <div class="mt-8 flex justify-center space-x-4">
+                <a href="https://github.com/VinayPurohit31/bookstore-api" target="_blank" rel="noopener noreferrer" class="px-6 py-3 text-lg font-semibold bg-cyan-500 text-slate-900 rounded-md hover:bg-cyan-400 transition-colors duration-300 transform hover:scale-105 inline-flex items-center space-x-2">
+                    <i data-lucide="github" class="w-5 h-5"></i>
+                    <span>View on GitHub</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Image Gallery -->
+        <section class="space-y-8">
+            <h2 class="text-3xl font-bold text-slate-100">Project Gallery</h2>
+            <!-- 
+                COMMENT: To add photos of your project, follow these steps:
+                1. Add your image files (e.g., 'bookstore-1.jpg', 'bookstore-2.png') to your GitHub repository in the same folder as this HTML file.
+                2. Replace the `src` attribute in the `<img>` tags below with the correct filename (e.g., `src="./bookstore-1.jpg"`).
+                3. You can add more images by copying the `<div>` block. I recommend using images with a 16:9 aspect ratio.
+            -->
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Image 1 -->
+                <div class="bg-slate-800 p-2 rounded-lg border-2 border-slate-700">
+                    <img src="https://placehold.co/1600x900/0f172a/94a3b8?text=Project+Screenshot+1" alt="Project Screenshot 1" class="rounded-md w-full h-full object-cover">
+                </div>
+                <!-- Image 2 -->
+                <div class="bg-slate-800 p-2 rounded-lg border-2 border-slate-700">
+                    <img src="https://placehold.co/1600x900/0f172a/94a3b8?text=Project+Screenshot+2" alt="Project Screenshot 2" class="rounded-md w-full h-full object-cover">
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Documentation/Details -->
+        <section class="mt-20 space-y-12">
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- Left Column: Tech Stack & More Info -->
+                <div class="md:col-span-1 space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-bold text-slate-100 mb-4">Tech Stack</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-5 h-5 mr-2 text-cyan-400"></i>Java</li>
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-5 h-5 mr-2 text-cyan-400"></i>Spring Boot</li>
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-5 h-5 mr-2 text-cyan-400"></i>Hibernate / JPA</li>
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-5 h-5 mr-2 text-cyan-400"></i>Postman</li>
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-5 h-5 mr-2 text-cyan-400"></i>Swagger UI</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right Column: About the Project -->
+                <div class="md:col-span-2 text-slate-400 space-y-4 text-lg">
+                    <h3 class="text-2xl font-bold text-slate-100">About This Project</h3>
+                    <p>
+                        The Bookstore REST API is a robust backend service designed to manage a large catalog of books and authors. Built with Spring Boot, it provides a full suite of CRUD (Create, Read, Update, Delete) endpoints, ensuring secure and efficient data management.
+                    </p>
+                     <!-- 
+                        COMMENT: You can add more detailed paragraphs here. 
+                        Talk about the problems you solved, your process, and what you learned.
+                        Simply add more `<p>` tags like the one above.
+                    -->
+                    <h4 class="text-xl font-bold text-slate-100 pt-4">Key Features</h4>
+                     <ul class="list-disc list-inside space-y-2">
+                        <li>Optimized complex JPA queries to reduce database retrieval times by nearly 25%.</li>
+                        <li>Automated Postman tests which boosted test coverage by 30% and helped identify critical bugs before launch.</li>
+                        <li>Integrated Swagger UI for clear, interactive API documentation, which greatly improved developer onboarding and usability.</li>
+                        <li>Implemented efficient filtering, sorting, and pagination to handle over 1,000 structured records with ease.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
