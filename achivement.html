@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements | Vinay Purohit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+        html {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #22d3ee, #06b6d4, #0891b2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-300">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-sm border-b border-slate-800">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="./index.html" class="text-2xl font-bold gradient-text">VP</a>
+                <a href="./index.html" class="flex items-center space-x-2 text-lg hover:text-cyan-400 transition-colors duration-300">
+                    <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                    <span>Back to Home</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 pt-16 pb-24">
+
+        <!-- Page Title -->
+        <section class="text-center py-16">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-slate-100">Achievements & Recognition</h1>
+            <p class="text-xl text-slate-400 max-w-2xl mx-auto mt-4">
+                A collection of my accomplishments, from competitive events to leadership roles.
+            </p>
+        </section>
+
+        <!-- Achievements List -->
+        <section class="space-y-16">
+
+            <!-- Achievement 1: Project Competition -->
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <!-- 
+                    COMMENT: Add your photo for this achievement here.
+                    1. Upload your image (e.g., 'competition-winner.jpg') to your GitHub repo.
+                    2. Replace the `src` below with the correct filename.
+                -->
+                <div class="bg-slate-800 p-2 rounded-lg border-2 border-slate-700">
+                    <img src="https://placehold.co/1600x900/0f172a/94a3b8?text=Competition+Photo" alt="Project Competition award" class="rounded-md w-full h-full object-cover">
+                </div>
+                <div class="text-slate-400 space-y-3">
+                    <h2 class="text-2xl font-bold text-slate-100">2nd Place, College Project Competition</h2>
+                    <p class="text-lg">Secured 2nd place in a highly competitive college-level project competition that featured over 20+ strong teams.</p>
+                    <p>Our project was recognized for its innovative approach and robust implementation. This experience honed my skills in rapid prototyping, teamwork under pressure, and presenting complex technical concepts to a diverse audience.</p>
+                </div>
+            </div>
+
+            <!-- Achievement 2: Aavishkar Zonal Level -->
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                 <div class="text-slate-400 space-y-3 md:order-last">
+                    <h2 class="text-2xl font-bold text-slate-100">Aavishkar Zonal Level Competition</h2>
+                    <p class="text-lg">Represented my college at the Aavishkar Zonal Level Competition, competing against more than 400+ diverse teams.</p>
+                    <p>This prestigious event was a fantastic platform to showcase our technical project on a larger stage and network with talented peers from across the region.</p>
+                </div>
+                <!-- 
+                    COMMENT: Add your photo for this achievement here.
+                    1. Upload your image (e.g., 'aavishkar-event.jpg') to your GitHub repo.
+                    2. Replace the `src` below with the correct filename.
+                -->
+                <div class="bg-slate-800 p-2 rounded-lg border-2 border-slate-700">
+                    <img src="https://placehold.co/1600x900/0f172a/94a3b8?text=Aavishkar+Event+Photo" alt="Aavishkar Zonal Level Competition" class="rounded-md w-full h-full object-cover">
+                </div>
+            </div>
+            
+            <!-- Achievement 3: Leadership & Event Management -->
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <!-- 
+                    COMMENT: Add your photo for this achievement here.
+                    1. Upload your image (e.g., 'team-photo.jpg') to your GitHub repo.
+                    2. Replace the `src` below with the correct filename.
+                -->
+                <div class="bg-slate-800 p-2 rounded-lg border-2 border-slate-700">
+                    <img src="https://placehold.co/1600x900/0f172a/94a3b8?text=Team/Event+Photo" alt="Team or Event Photo" class="rounded-md w-full h-full object-cover">
+                </div>
+                <div class="text-slate-400 space-y-3">
+                    <h2 class="text-2xl font-bold text-slate-100">Leadership & Event Organization</h2>
+                     <ul class="list-disc list-inside space-y-2 text-lg">
+                        <li>Led the Mahashabda Kode development project, successfully managing a 20-member student team.</li>
+                        <li>Organized a BGMI LAN gaming event with 400+ participants, ensuring smooth coordination.</li>
+                        <li>Served as a Core Committee Member for the 'Jigyasa' event with over 1500+ attendees.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
