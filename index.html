@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinay Purohit | Java Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Animation styles */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .skill-tag {
+            transition: all 0.2s ease-in-out;
+        }
+        .skill-tag:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 255, 255, 0.2);
+        }
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-300 antialiased selection:bg-cyan-300 selection:text-cyan-900">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-slate-900/75 backdrop-blur-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white tracking-wider">
+                VP<span class="text-cyan-400">.</span>
+            </a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="hover:text-cyan-400 transition-colors duration-300">About</a>
+                <a href="#experience" class="hover:text-cyan-400 transition-colors duration-300">Experience</a>
+                <a href="#projects" class="hover:text-cyan-400 transition-colors duration-300">Projects</a>
+                <a href="#contact" class="hover:text-cyan-400 transition-colors duration-300">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-800">
+            <a href="#about" class="block py-2 px-6 text-center hover:bg-slate-700">About</a>
+            <a href="#experience" class="block py-2 px-6 text-center hover:bg-slate-700">Experience</a>
+            <a href="#projects" class="block py-2 px-6 text-center hover:bg-slate-700">Projects</a>
+            <a href="#contact" class="block py-2 px-6 text-center hover:bg-slate-700">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6">
+        <!-- Hero Section -->
+        <section id="home" class="min-h-[90vh] flex flex-col justify-center items-start pt-16 md:pt-0">
+            <div class="max-w-3xl">
+                <p class="text-lg text-cyan-400 mb-4 reveal" style="transition-delay: 100ms;">Hi, my name is</p>
+                <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold text-slate-100 tracking-tight reveal" style="transition-delay: 200ms;">Vinay Purohit.</h1>
+                <h2 class="text-3xl sm:text-5xl md:text-6xl font-bold text-slate-400 mt-2 reveal" style="transition-delay: 300ms;">I build things for the web and beyond.</h2>
+                <p class="mt-6 max-w-xl text-lg text-slate-400 reveal" style="transition-delay: 400ms;">
+                    I'm a passionate Java Developer with a knack for creating robust and scalable backend systems and engaging mobile applications. Currently focused on deepening my expertise in cloud-native technologies and clean architecture.
+                </p>
+                <div class="mt-12 flex flex-wrap items-center gap-6 reveal" style="transition-delay: 500ms;">
+                    <a href="./Vinay_Purohit_Resume-10.pdf" download="Vinay_Purohit_Resume.pdf" class="inline-block bg-transparent border-2 border-cyan-400 text-cyan-400 font-medium py-3 px-8 rounded-lg hover:bg-cyan-400/10 transition-colors duration-300">
+                        Download Resume
+                    </a>
+                    <div class="flex items-center space-x-6">
+                        <a href="mailto:vinaypurohit31@gmail.com" class="hover:text-cyan-400 transition-colors duration-300" aria-label="Email">
+                            <i data-lucide="mail" class="w-7 h-7"></i>
+                        </a>
+                        <a href="https://github.com/your-github-username" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-colors duration-300" aria-label="GitHub">
+                            <i data-lucide="github" class="w-7 h-7"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-colors duration-300" aria-label="LinkedIn">
+                            <i data-lucide="linkedin" class="w-7 h-7"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me -->
+        <section id="about" class="py-24">
+            <div class="reveal">
+                <h2 class="text-3xl font-bold text-slate-100 mb-8 flex items-center">
+                    <span class="text-cyan-400 font-mono text-2xl mr-4">01.</span> About Me
+                    <span class="h-px bg-slate-600 flex-grow ml-6"></span>
+                </h2>
+                <div class="grid md:grid-cols-5 gap-10">
+                    <div class="md:col-span-3 text-slate-400 space-y-4 text-lg">
+                        <p>Hello! I'm Vinay, a software developer based in Pune, India. My journey into programming started with a fascination for how technology can solve real-world problems, which led me to pursue a Master's in Computer Application.</p>
+                        <p>Today, I specialize in Java and the Spring Boot framework, building efficient REST APIs and backend services. I also have hands-on experience in cross-platform mobile development with React Native, bringing ideas to life on both Android and iOS.</p>
+                        <p>When I'm not coding, I enjoy organizing events, competing in hackathons, and leading teams to create cool projects. I'm always eager to learn new technologies and take on challenging projects.</p>
+                    </div>
+                     <div class="md:col-span-2 flex items-center justify-center">
+                        <div class="w-64 h-64 rounded-lg bg-slate-800 border-2 border-cyan-400 relative group">
+                            <img src="./photo.jpg" alt="Vinay Purohit" class="absolute w-full h-full object-cover rounded-md z-10 group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform duration-300">
+                             <div class="w-full h-full rounded-lg border-2 border-cyan-400 absolute top-4 left-4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="py-24">
+             <div class="reveal">
+                <h2 class="text-3xl font-bold text-slate-100 mb-8 flex items-center justify-center">
+                    <span class="h-px bg-slate-600 flex-grow mr-6"></span> My Tech Stack <span class="h-px bg-slate-600 flex-grow ml-6"></span>
+                </h2>
+                <div class="max-w-4xl mx-auto text-center text-slate-400 flex flex-wrap justify-center gap-3">
+                    <span class="skill-tag bg-cyan-400/10 text-cyan-300 py-2 px-4 rounded-full text-sm font-medium">Java</span>
+                    <span class="skill-tag bg-cyan-400/10 text-cyan-300 py-2 px-4 rounded-full text-sm font-medium">Python</span>
+                    <span class="skill-tag bg-cyan-400/10 text-cyan-300 py-2 px-4 rounded-full text-sm font-medium">JavaScript</span>
+                    <span class="skill-tag bg-cyan-400/10 text-cyan-300 py-2 px-4 rounded-full text-sm font-medium">HTML</span>
+                    <span class="skill-tag bg-cyan-400/10 text-cyan-300 py-2 px-4 rounded-full text-sm font-medium">CSS</span>
+                    <span class="skill-tag bg-cyan-400/10 text-cyan-300 py-2 px-4 rounded-full text-sm font-medium">Spring Boot</span>
+                    <span class="skill-tag bg-cyan-400/10 text-cyan-300 py-2 px-4 rounded-full text-sm font-medium">Hibernate</span>
+                    <span class="skill-tag bg-cyan-400/10 text-cyan-300 py-2 px-4 rounded-full text-sm font-medium">React Native</span>
+                    <span class="skill-tag bg-cyan-400/10 text-cyan-300 py-2 px-4 rounded-full text-sm font-medium">Android XML</span>
+                    <span class="skill-tag bg-cyan-400/10 text-cyan-300 py-2 px-4 rounded-full text-sm font-medium">Clean Architecture</span>
+                    <span class="skill-tag bg-cyan-400/10 text-cyan-300 py-2 px-4 rounded-full text-sm font-medium">Design Patterns</span>
+                    <span class="skill-tag bg-cyan-400/10 text-cyan-300 py-2 px-4 rounded-full text-sm font-medium">Data Structures</span>
+                    <span class="skill-tag bg-cyan-400/10 text-cyan-300 py-2 px-4 rounded-full text-sm font-medium">DBMS</span>
+                    <span class="skill-tag bg-cyan-400/10 text-cyan-300 py-2 px-4 rounded-full text-sm font-medium">Git</span>
+                </div>
+             </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" class="py-24">
+            <div class="reveal">
+                <h2 class="text-3xl font-bold text-slate-100 mb-12 flex items-center">
+                    <span class="text-cyan-400 font-mono text-2xl mr-4">02.</span> Where I've Worked
+                    <span class="h-px bg-slate-600 flex-grow ml-6"></span>
+                </h2>
+                <div class="max-w-3xl">
+                    <div class="flex">
+                        <div class="flex flex-col items-center mr-6">
+                           <div>
+                                <div class="flex items-center justify-center w-12 h-12 rounded-full bg-slate-800 border-2 border-cyan-400">
+                                   <i data-lucide="briefcase" class="w-6 h-6 text-cyan-400"></i>
+                                </div>
+                            </div>
+                           <div class="w-px h-full bg-slate-600"></div>
+                        </div>
+                        <div class="pb-12">
+                            <h3 class="text-xl font-semibold text-slate-100 mb-1">Java Developer Intern <span class="text-cyan-400">@ Elevate Labs</span></h3>
+                            <p class="text-sm text-slate-500 font-mono mb-4">Remote | 2025</p>
+                            <ul class="list-disc list-inside text-slate-400 space-y-2">
+                                <li>Contributed to a Spring Boot RESTful API managing over 1,000 book and author records.</li>
+                                <li>Developed and tested 12+ API endpoints with full CRUD functionality, reducing backend errors by 30%.</li>
+                                <li>Automated Postman test scripts, cutting manual testing time by 25% and detecting critical bugs.</li>
+                                <li>Integrated Swagger UI for interactive API documentation, improving adoption by nearly 40%.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="py-24">
+            <div class="reveal">
+                <h2 class="text-3xl font-bold text-slate-100 mb-8 flex items-center">
+                    <span class="text-cyan-400 font-mono text-2xl mr-4">03.</span> Things I've Built
+                    <span class="h-px bg-slate-600 flex-grow ml-6"></span>
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Project 1 -->
+                    <div class="project-card bg-slate-800 rounded-lg p-6 flex flex-col justify-between hover:shadow-2xl hover:shadow-cyan-500/10">
+                        <div>
+                            <div class="flex justify-between items-center mb-4">
+                                <i data-lucide="folder-git-2" class="w-10 h-10 text-cyan-400"></i>
+                                <div class="space-x-2">
+                                    <a href="#" class="hover:text-cyan-400"><i data-lucide="github" class="w-6 h-6"></i></a>
+                                    <a href="#" class="hover:text-cyan-400"><i data-lucide="arrow-up-right-square" class="w-6 h-6"></i></a>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-100 mb-2">Bookstore REST API</h3>
+                            <p class="text-slate-400 text-sm">A scalable Spring Boot API with CRUD, filtering, sorting, and pagination for efficiently handling over 1,000 structured records.</p>
+                        </div>
+                        <div class="mt-4 flex flex-wrap gap-2 text-xs font-mono text-cyan-300">
+                            <span>Spring Boot</span><span>JPA/Hibernate</span><span>Postman</span><span>Swagger</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card bg-slate-800 rounded-lg p-6 flex flex-col justify-between hover:shadow-2xl hover:shadow-cyan-500/10">
+                        <div>
+                            <div class="flex justify-between items-center mb-4">
+                                <i data-lucide="folder-git-2" class="w-10 h-10 text-cyan-400"></i>
+                                <div class="space-x-2">
+                                    <a href="#" class="hover:text-cyan-400"><i data-lucide="github" class="w-6 h-6"></i></a>
+                                    <a href="#" class="hover:text-cyan-400"><i data-lucide="arrow-up-right-square" class="w-6 h-6"></i></a>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-100 mb-2">DailyDose - Smart Medication</h3>
+                            <p class="text-slate-400 text-sm">A cross-platform React Native app with real-time Firebase backend to track medications and send reminders, reducing missed doses by 70%.</p>
+                        </div>
+                        <div class="mt-4 flex flex-wrap gap-2 text-xs font-mono text-cyan-300">
+                            <span>React Native</span><span>Firebase</span><span>JavaScript</span><span>Push Notifications</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="project-card bg-slate-800 rounded-lg p-6 flex flex-col justify-between hover:shadow-2xl hover:shadow-cyan-500/10">
+                        <div>
+                            <div class="flex justify-between items-center mb-4">
+                                <i data-lucide="folder-git-2" class="w-10 h-10 text-cyan-400"></i>
+                                <div class="space-x-2">
+                                    <a href="#" class="hover:text-cyan-400"><i data-lucide="github" class="w-6 h-6"></i></a>
+                                    <a href="#" class="hover:text-cyan-400"><i data-lucide="arrow-up-right-square" class="w-6 h-6"></i></a>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-100 mb-2">Messify</h3>
+                            <p class="text-slate-400 text-sm">An Android app built with Kotlin and XML to discover local food mess services within a 5 km radius, featuring 15+ interactive screens.</p>
+                        </div>
+                        <div class="mt-4 flex flex-wrap gap-2 text-xs font-mono text-cyan-300">
+                            <span>Android</span><span>Kotlin</span><span>XML</span><span>Google Maps API</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="py-24 text-center">
+            <div class="reveal">
+                <h2 class="text-2xl font-mono text-cyan-400">04. What's Next?</h2>
+                <h3 class="text-5xl font-bold text-slate-100 mt-4 mb-4">Get In Touch</h3>
+                <p class="max-w-xl mx-auto text-slate-400 mb-8">
+                    I'm always open to discussing new projects, creative ideas, or opportunities to be part of an amazing team. Feel free to reach out, and I'll get back to you!
+                </p>
+                <a href="mailto:vinaypurohit31@gmail.com" class="inline-block bg-transparent border-2 border-cyan-400 text-cyan-400 font-medium py-3 px-8 rounded-lg hover:bg-cyan-400/10 transition-colors duration-300">
+                    Say Hello
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="py-6 text-center text-slate-500 text-sm">
+        <p>Designed & Built by Vinay Purohit</p>
+        <p>Inspired by modern web design trends.</p>
+    </footer>
+
+    <script>
+        // Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Intersection Observer for animations
+        const revealElements = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Optional: unobserve after revealing to save resources
+                    // observer.unobserve(entry.target); 
+                }
+            });
+        }, {
+            threshold: 0.1 // Trigger when 10% of the element is visible
+        });
+
+        revealElements.forEach(el => {
+            observer.observe(el);
+        });
+
+    </script>
+</body>
+</html>
+
+
